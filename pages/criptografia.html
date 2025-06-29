@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CriptoEducação - Criptografia</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="menu-toggle">☰</button>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="fundamentos.html">Fundamentos</a></li>
+            <li><a href="criptografia.html">Criptografia</a></li>
+            <li><a href="web-seguranca.html">Web Segurança</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section fade-in">
+            <h1>Desafios de Criptografia</h1>
+            <p>Teste seus conhecimentos com quizzes interativos e desafios práticos sobre criptografia!</p>
+        </section>
+
+        <section class="section fade-in quiz-container">
+            <h2>Quiz Interativo</h2>
+            <div id="quiz">
+                <div id="question"></div>
+                <div id="options" class="options"></div>
+                <div id="feedback"></div>
+                <button id="next-btn" class="btn" style="display: none;">Próxima Pergunta</button>
+            </div>
+            <div id="result" style="display: none;">
+                <h3>Resultado</h3>
+                <p id="score"></p>
+                <button id="restart-btn" class="btn">Reiniciar Quiz</button>
+            </div>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Desafio de Codificação</h2>
+            <p>Tente implementar uma Cifra de César simples! Digite um texto e um deslocamento, e veja o resultado.</p>
+            <div class="crypto-input">
+                <input type="text" id="codeInput" placeholder="Digite o texto">
+                <input type="number" id="codeShift" min="1" max="25" value="3" placeholder="Deslocamento">
+                <button onclick="codeChallenge()">Criptografar</button>
+                <p id="codeOutput"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 CriptoEducação. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

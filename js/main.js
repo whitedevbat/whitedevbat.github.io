@@ -8,6 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Highlight active page in sidebar
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+    sidebarLinks.forEach(link => {
+        const href = link.getAttribute('href').split('/').pop();
+        if (href === currentPage) {
+            link.classList.add('active');
+        }
+    });
+
     // Concepts carousel
     const conceptItems = document.querySelectorAll('.concept-item');
     const prevBtn = document.querySelector('.control-btn.prev');

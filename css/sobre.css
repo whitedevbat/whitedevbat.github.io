@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding-left: 220px;
+    overflow-x: hidden;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 200px;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    z-index: 10;
+    transition: box-shadow 0.3s ease;
+}
+
+.sidebar:hover {
+    box-shadow: 2px 0 10px rgba(64, 196, 255, 0.5);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px;
+    display: block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #40c4ff;
+    background-color: rgba(46, 46, 46, 0.5);
+    transform: translateX(5px);
+}
+
+.sidebar a.active {
+    color: #40c4ff;
+    background-color: rgba(64, 196, 255, 0.2);
+    box-shadow: 0 0 10px rgba(64, 196, 255, 0.5);
+    animation: pulse 2s infinite;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 60px;
+    color: #ffffff;
+    padding: 40px 0;
+    text-shadow: 0 2px 5px rgba(64, 196, 255, 0.5);
+    opacity: 0;
+    animation: fadeInDown 1.5s ease forwards;
+}
+
+.project-section {
+    padding: 60px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.3s;
+}
+
+.project-section h2 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(64, 196, 255, 0.3);
+}
+
+.project-section p {
+    font-size: 20px;
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+.developer-section {
+    padding: 60px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.6s;
+}
+
+.developer-section h2 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(64, 196, 255, 0.3);
+}
+
+.developer-section p {
+    font-size: 20px;
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+.contact-section {
+    padding: 60px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.9s;
+}
+
+.contact-section h2 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(64, 196, 255, 0.3);
+}
+
+.contact-section p {
+    font-size: 20px;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #2e2e2e;
+    border: none;
+    color: #e0e0e0;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(64, 196, 255, 0.5);
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.glow-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #40c4ff;
+    color: #121212;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px rgba(64, 196, 255, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.glow-btn:hover {
+    background-color: #0288d1;
+    box-shadow: 0 0 20px rgba(64, 196, 255, 0.8);
+    transform: scale(1.1);
+}
+
+#form-feedback {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #40c4ff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+footer p {
+    font-size: 16px;
+    color: #b0b0b0;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #40c4ff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 15;
+    color: #121212;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(64, 196, 255, 0.5); }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(64, 196, 255, 0.8); }
+    100% { transform: scale(1); box-shadow: 0 0 10px rgba(64, 196, 255, 0.5); }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-left: 0;
+    }
+    .sidebar {
+        top: 0;
+        transform: translateX(-100%);
+        height: 100vh;
+        width: 200px;
+        border-radius: 0;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .sidebar a {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .sidebar a.active {
+        font-size: 16px;
+        padding: 10px;
+    }
+    main {
+        margin: 20px;
+    }
+    .page-title {
+        font-size: 40px;
+        padding: 20px 0;
+    }
+    .project-section, .developer-section, .contact-section {
+        padding: 40px 0;
+    }
+    .project-section h2, .developer-section h2, .contact-section h2 {
+        font-size: 36px;
+    }
+    .project-section p, .developer-section p, .contact-section p {
+        font-size: 18px;
+    }
+    .contact-form input, .contact-form textarea {
+        font-size: 14px;
+    }
+    .contact-form textarea {
+        height: 120px;
+    }
+    .glow-btn {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+    #form-feedback {
+        font-size: 16px;
+    }
+}

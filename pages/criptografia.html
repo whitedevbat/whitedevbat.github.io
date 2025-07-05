@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EncryptedLab - Criptografia</title>
+    <link rel="stylesheet" href="../css/criptografia.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="menu-toggle">☰</button>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="fundamentos.html">Fundamentos</a></li>
+            <li><a href="criptografia.html">Criptografia</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+    <canvas id="bg"></canvas>
+    <main>
+        <h1 class="page-title">Criptografia Interativa</h1>
+        <section class="intro-section">
+            <h2>Teste os Seus Conhecimentos</h2>
+            <p>Coloque em prática o que aprendeu sobre criptografia com quizzes e exercícios interativos. Responda às perguntas, ligue conceitos e experimente a Cifra de César!</p>
+        </section>
+        <section class="quiz-section">
+            <h2>Quiz de Criptografia</h2>
+            <div class="quiz-container">
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <div class="quiz-item">
+                    <h3 id="quiz-question"></h3>
+                    <div class="quiz-options" id="quiz-options"></div>
+                    <p id="quiz-feedback"></p>
+                    <button class="control-btn next" id="next-question">Próxima Pergunta</button>
+                </div>
+                <p id="quiz-score">Pontuação: 0/8</p>
+            </div>
+        </section>
+        <section class="match-section">
+            <h2>Exercício de Correspondência</h2>
+            <p>Arraste as descrições para os conceitos corretos:</p>
+            <div class="match-container">
+                <div class="match-concepts">
+                    <div class="match-concept" data-concept="simetrica">Criptografia Simétrica</div>
+                    <div class="match-concept" data-concept="assimetrica">Criptografia Assimétrica</div>
+                    <div class="match-concept" data-concept="hash">Função Hash</div>
+                    <div class="match-concept" data-concept="cifradecesar">Cifra de César</div>
+                </div>
+                <div class="match-descriptions">
+                    <div class="match-description" draggable="true" data-description="unica">Usa uma única chave para criptografar e descriptografar</div>
+                    <div class="match-description" draggable="true" data-description="publica">Usa chave pública e privada</div>
+                    <div class="match-description" draggable="true" data-description="hash">Gera um código fixo para verificar integridade</div>
+                    <div class="match-description" draggable="true" data-description="historica">Método antigo de substituição de letras</div>
+                </div>
+            </div>
+            <button class="control-btn" id="check-match">Verificar Respostas</button>
+            <p id="match-feedback"></p>
+            <p id="match-score">Pontuação: 0/4</p>
+        </section>
+        <section class="caesar-section">
+            <h2>Simulador de Cifra de César</h2>
+            <p>Insira uma mensagem e um deslocamento para criptografar ou descriptografar:</p>
+            <div class="caesar-container">
+                <input type="text" id="caesar-message" placeholder="Digite a mensagem (ex.: OLA)">
+                <input type="number" id="caesar-shift" min="1" max="25" placeholder="Deslocamento (1-25)">
+                <button class="control-btn" id="caesar-encrypt">Criptografar</button>
+                <button class="control-btn" id="caesar-decrypt">Descriptografar</button>
+                <p id="caesar-result"></p>
+            </div>
+        </section>
+        <section class="summary-section">
+            <h2>Continue a Aprender</h2>
+            <p>Revise os fundamentos ou explore mais sobre criptografia!</p>
+            <a href="fundamentos.html" class="glow-btn">Voltar aos Fundamentos</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 EncryptedLab. Todos os direitos reservados. Ícones fornecidos por Pixabay sob Pixabay License e Wikimedia Commons sob licenças CC0, CC BY-SA, ou domínio público.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/criptografia.js"></script>
+</body>
+</html>

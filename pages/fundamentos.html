@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EncryptedLab - Fundamentos</title>
+    <link rel="stylesheet" href="../css/fundamentos.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="menu-toggle">☰</button>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="fundamentos.html">Fundamentos</a></li>
+            <li><a href="criptografia.html">Criptografia</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+    <canvas id="bg"></canvas>
+    <main>
+        <h1 class="page-title">Fundamentos da Criptografia</h1>
+        <section class="intro-section">
+            <h2>Compreender a Criptografia</h2>
+            <p>A criptografia é a base da segurança digital. Aprenda os conceitos essenciais para entender como protege os nossos dados.</p>
+            <div class="intro-points">
+                <div class="intro-point">
+                    <img src="/assets/images/key.png" alt="O que é Criptografia" class="point-icon">
+                    <h3>O que é Criptografia?</h3>
+                    <p>A criptografia transforma dados em códigos indecifráveis, acessíveis apenas com a chave correta. É como um cadeado digital que mantém informações seguras.</p>
+                    <p><strong>Exemplo:</strong> A mensagem "OLA" pode ser codificada como "PMB" usando uma chave simples que desloca cada letra.</p>
+                </div>
+                <div class="intro-point">
+                    <img src="/assets/images/privacity.png" alt="Para que Serve" class="point-icon">
+                    <h3>Para que Serve?</h3>
+                    <p>Garante privacidade (ninguém lê os seus dados), segurança (protege contra ataques) e integridade (verifica que os dados não foram alterados).</p>
+                    <p><strong>Exemplo:</strong> Um e-mail criptografado só pode ser lido pelo destinatário com a chave certa.</p>
+                </div>
+                <div class="intro-point">
+                    <img src="/assets/images/secure.png" alt="Em que é Usada" class="point-icon">
+                    <h3>Em que é Usada?</h3>
+                    <p>Está em mensagens (ex.: WhatsApp), compras online, senhas, transferências bancárias, proteção de dispositivos e muito mais.</p>
+                    <p><strong>Exemplo:</strong> Ao comprar online, a criptografia protege os dados do seu cartão.</p>
+                </div>
+            </div>
+        </section>
+        <section class="history-section">
+            <h2>História da Criptografia</h2>
+            <div class="history-content">
+                <img src="/assets/images/history.jpg" alt="História da Criptografia" class="history-icon">
+                <p>A criptografia existe há séculos, desde mensagens codificadas em pergaminhos até sistemas digitais modernos. Por exemplo, a Cifra de César, usada por Júlio César, deslocava letras para esconder mensagens. Hoje, a criptografia protege tudo, desde e-mails a transações bancárias.</p>
+                <p><strong>Exemplo:</strong> Na Cifra de César, "ABC" com deslocamento de 3 torna-se "DEF".</p>
+            </div>
+        </section>
+        <section class="concepts">
+            <h2>Os Pilares Técnicos da Criptografia</h2>
+            <p>Explore os principais tipos de criptografia que garantem a segurança digital:</p>
+            <div class="concepts-carousel">
+                <div class="concept-item active" data-concept="0">
+                    <img src="/assets/images/simetrica.png" alt="Criptografia Simétrica" class="concept-icon">
+                    <h3>Criptografia Simétrica</h3>
+                    <p>Usa uma única chave para criptografar e descriptografar. É rápida e ideal para grandes quantidades de dados, como ficheiros ou discos.</p>
+                    <p><strong>Exemplo:</strong> A frase "OLA" torna-se "PMB" ao trocar cada letra pela seguinte (A→B).</p>
+                </div>
+                <div class="concept-item" data-concept="1">
+                    <img src="/assets/images/assimetrica.png" alt="Criptografia Assimétrica" class="concept-icon">
+                    <h3>Criptografia Assimétrica</h3>
+                    <p>Usa duas chaves: uma pública para criptografar e uma privada para descriptografar. É mais segura para comunicação online.</p>
+                    <p><strong>Exemplo:</strong> Envie "OI" com a chave pública; só a chave privada revela a mensagem.</p>
+                </div>
+                <div class="concept-item" data-concept="2">
+                    <img src="/assets/images/hash.png" alt="Hash" class="concept-icon">
+                    <h3>Função Hash</h3>
+                    <p>Transforma dados num código fixo (hash), usado para verificar integridade. Um pequeno cambio nos dados gera um hash completamente diferente.</p>
+                    <p><strong>Exemplo:</strong> A senha "123" gera um hash como "a1b2c3".</p>
+                </div>
+                <div class="concept-item" data-concept="3">
+                    <img src="/assets/images/cifradecesar.png" alt="Cifras Históricas" class="concept-icon">
+                    <h3>Cifras Históricas</h3>
+                    <p>Métodos antigos, como a Cifra de César, usavam substituição ou deslocamento de letras para esconder mensagens.</p>
+                    <p><strong>Exemplo:</strong> Na Cifra de César, "ABC" com deslocamento de 1 torna-se "BCD".</p>
+                </div>
+                <div class="concept-item" data-concept="4">
+                    <img src="/assets/images/hibrido.png" alt="Criptografia Híbrida" class="concept-icon">
+                    <h3>Criptografia Híbrida</h3>
+                    <p>Combina simétrica (rápida) e assimétrica (segura) para otimizar segurança e desempenho.</p>
+                    <p><strong>Exemplo:</strong> Uma chave simétrica é criptografada com uma chave pública para envio seguro.</p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="control-btn prev">← Anterior</button>
+                <button class="control-btn next">Próximo →</button>
+            </div>
+        </section>
+        <section class="applications-section">
+            <h2>Aplicações Práticas da Criptografia</h2>
+            <p>Veja como a criptografia é usada no dia a dia para proteger a sua vida digital:</p>
+            <div class="application-points">
+                <div class="application-point">
+                    <img src="/assets/images/https.png" alt="HTTPS" class="point-icon">
+                    <h3>HTTPS</h3>
+                    <p>Protege a navegação na web, garantindo que os sites visitados são seguros e que os dados enviados (ex.: senhas) estão criptografados.</p>
+                    <p><strong>Exemplo:</strong> O cadeado no browser indica que o site usa HTTPS.</p>
+                </div>
+                <div class="application-point">
+                    <img src="/assets/images/vpn.png" alt="VPN" class="point-icon">
+                    <h3>VPN</h3>
+                    <p>Cria túneis seguros para proteger a sua conexão à internet, escondendo o seu endereço IP e dados de navegação.</p>
+                    <p><strong>Exemplo:</strong> Uma VPN protege os seus dados em redes Wi-Fi públicas.</p>
+                </div>
+                <div class="application-point">
+                    <img src="/assets/images/blockchain.png" alt="Blockchain" class="point-icon">
+                    <h3>Blockchain</h3>
+                    <p>Usa criptografia para proteger transações em criptomoedas, garantindo transparência e segurança.</p>
+                    <p><strong>Exemplo:</strong> O Bitcoin usa hash para validar transações.</p>
+                </div>
+            </div>
+        </section>
+        <section class="summary-section">
+            <h2>Resumo</h2>
+            <p>A criptografia é a base da segurança digital, protegendo desde mensagens a transações bancárias. Compreender os seus fundamentos é o primeiro passo para dominar este tema essencial!</p>
+            <a href="criptografia.html" class="glow-btn">Explore Mais</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 EncryptedLab. Todos os direitos reservados. Ícones fornecidos por Pixabay sob Pixabay License e Wikimedia Commons sob licenças CC0, CC BY-SA, ou domínio público.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
